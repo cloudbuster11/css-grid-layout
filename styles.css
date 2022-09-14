@@ -25,12 +25,12 @@ body {
 }
 
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   max-height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50px;
-  grid-auto-rows: 300px;
+  /* grid-template-rows: 50px;
+  grid-auto-rows: 300px; */
 }
 
 p,
@@ -62,9 +62,8 @@ nav {
 
 nav {
   grid-column: auto / span 10;
-  grid-row: auto / 1fr;
   width: 100%;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
 }
@@ -166,17 +165,15 @@ main {
   grid-row: auto / span 3;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-rows: 130px;
-  grid-auto-rows: 300px;
+  grid-template-rows: 2fr 4fr 0.5fr 4fr 1fr;
   column-gap: 2rem;
-  row-gap: 4rem;
 }
 
 main h1 {
   justify-self: center;
-  align-self: flex-end;
+  align-self: center;
   grid-column: 4/8;
+  margin: 3rem 0rem;
 }
 
 .card--product {
@@ -218,6 +215,16 @@ main h1 {
   justify-content: center;
 }
 
+.product-5 {
+  grid-column: 2 / span 4;
+  grid-row: 4;
+}
+
+.product-6 {
+  grid-column: 6 / span 4;
+  grid-row: 4;
+}
+
 .card--collection p {
   color: #aeadad;
 }
@@ -227,15 +234,6 @@ main h1 {
   border: 1px solid #aeadad;
   color: #aeadad;
   margin-top: 1rem;
-}
-
-.product-5 {
-  grid-column: 2 / span 4;
-  grid-row: 3;
-}
-.product-6 {
-  grid-column: 6 / span 4;
-  grid-row: 3;
 }
 
 /* Footer Section */
